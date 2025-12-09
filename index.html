@@ -501,10 +501,11 @@
                     </nav>
 
                     {/* HERO SECTION */}
-                    <header id="sobre" className="min-h-screen flex items-center pt-20 relative px-6">
+                    <header id="sobre" className="min-h-screen flex items-center pt-40 md:pt-48 relative px-6">
                         <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center relative z-10 w-full">
                             
-                            <div className="md:col-span-5 relative group order-1 md:order-none perspective-1000">
+                            {/* FOTO - Ordem 2 no Mobile, Padrão (1º) no Desktop */}
+                            <div className="md:col-span-5 relative group order-2 md:order-none perspective-1000">
                                 <div className="relative z-10 aspect-[3/4] bg-[#1C1917] overflow-hidden shadow-2xl transition-transform duration-700 hover:rotate-y-12 hover:rotate-x-12 transform-style-3d group-hover:shadow-[0_20px_50px_rgba(184,115,51,0.3)]">
                                     {!photoError ? (
                                         <img 
@@ -523,7 +524,8 @@
                                 <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-[#B87333] z-0 opacity-50 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
                             </div>
 
-                            <div className="md:col-span-7 space-y-8 text-center md:text-left order-2 md:order-none">
+                            {/* TEXTO - Ordem 1 no Mobile, Padrão (2º) no Desktop */}
+                            <div className="md:col-span-7 space-y-8 text-center md:text-left order-1 md:order-none">
                                 <ScrollReveal>
                                     <span className="text-[#B87333] text-xs font-bold tracking-[0.4em] uppercase mb-4 block font-sans animate-pulse">
                                         {t.hero.role}
